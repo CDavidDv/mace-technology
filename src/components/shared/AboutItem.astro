@@ -1,0 +1,31 @@
+---
+import Paragraph from "./Paragraph.astro";
+
+interface Props {
+    title: string;
+    descrip: string;
+    odd?: string;
+}
+
+const { title, descrip, odd } = Astro.props;
+---
+
+<div class="flex items-center lg:w-4/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+    
+      {
+        !odd ? <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-yellow-200 dark:bg-orange-500 text-orange-400 dark:text-yellow-100 flex-shrink-0">
+        <slot />
+        </div>  : ""
+      } 
+    
+    <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+      <h2 class="text-gray-900 dark:text-gray-50 text-lg title-font font-medium mb-2">{title}</h2>
+      <Paragraph>{descrip}</Paragraph>
+      
+    </div>
+    {
+        odd ? <div class="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-yellow-200 dark:bg-orange-500 text-orange-400 dark:text-yellow-100 flex-shrink-0">
+        <slot />
+        </div>  : ""
+    }
+</div>

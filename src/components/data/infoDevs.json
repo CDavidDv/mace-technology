@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Axel Diaz Hernandez",
+        "imgProfile": "./images/imgAxel.webp",
+        "position": "Software Developer",
+        "description": "Experto en desarrollo de software con amplia experiencia en proyectos de gran escala.",
+        "linkFacebook": "https://www.facebook.com/axel.diazhernandez.9",
+        "linkInstragram": "https://www.instagram.com/diaz_axel1/",
+        "linkGmail": "mailto:axeldiazhernandez10@gmail.com?subject=Contactando",
+        "linkLnkd": "https://www.linkedin.com/in/axel-diaz-hernandez-209230278"
+    },
+    {
+        "name": "Carlos David Ballesteros Torres",
+        "imgProfile": "./images/imgCarlos.webp",
+        "position": "FullStack Developer",
+        "description": "Especializado en desarrollo web frontend como backend, crea soluciones completas y atractivas para nuestros clientes.",
+        "linkFacebook": "https://www.facebook.com/carlos.david.alv/",
+        "linkInstragram": "https://www.instagram.com/david.1806/",
+        "linkGmail": "mailto:carlos.david1806@gmail.com?subject=Contactando",
+        "linkLnkd": "https://www.linkedin.com/in/carlos-david-bt"
+    },
+    {
+        "name": "Erick Vizuet Martinez",
+        "imgProfile": "./images/imgErick.webp",
+        "position": "Java Developer",
+        "description": "Experimentado en Java, garantiza soluciones seguras y eficientes para aplicaciones empresariales.",
+        "linkFacebook": "https://www.facebook.com/erick.vizuet.16",
+        "linkInstragram": "https://www.instagram.com/erickvizuet54/",
+        "linkGmail": "mailto:rockvizuet@gmail.com?subject=Contactando",
+        "linkLnkd": "https://www.linkedin.com/in/erick-vizuet-martinez-aa7124297"
+    }
+]

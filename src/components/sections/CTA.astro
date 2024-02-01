@@ -1,0 +1,22 @@
+---
+import Button from "../shared/Button.astro";
+import Container from "../shared/Container.astro";
+import DataAndMap from "../shared/DataAndMap.astro";
+import FormContac from "../shared/FormContac.astro";
+import Paragraph from "../shared/Paragraph.astro";
+---
+
+<section class="pb-20" id="Contacto">
+  <Container>
+    <section
+      class="md:flex md:flex-raw block text-gray-400 rounded-3xl bg-gray-100 bg-transparent dark:bg-gray-800 body-font relative"
+    >
+      <div class="px-5 mx-auto flex md:w-4/5 ">
+        <DataAndMap />
+      </div>
+      <div class="px-5 mx-auto flex md:w-8/12 w-full">
+        <FormContac />
+      </div>
+    </section>
+  </Container>
+</section>

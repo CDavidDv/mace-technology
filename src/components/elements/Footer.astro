@@ -1,0 +1,155 @@
+---
+import GroupFooterNav from "../blocks/GroupFooterNav.astro";
+import Container from "../shared/Container.astro";
+import FooterNav from "../shared/FooterNav.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import SocialLinks from "../shared/SocialLinks.astro";
+
+export interface Props {
+    varFooter?: string;
+}
+
+const {varFooter} = Astro.props;
+
+let footerCompany;
+
+const footerSupport = [
+    {
+        itemText: "Acerca de",
+        itemLink: "/AcercaDe",
+    },
+    {
+        itemText: "FAQ",
+        itemLink: "/faq",
+    },
+];
+
+if(varFooter === "index"){
+    footerCompany = [
+        {
+            itemText: "Inicio",
+            itemLink: "#inicio",
+        },
+        {
+            itemText: "Equipo",
+            itemLink: "#Talent",
+        },
+        {
+            itemText: "Proyectos",
+            itemLink: "#Proyectos",
+        },
+        {
+            itemText: "Contacto",
+            itemLink: "#Contacto",
+        },
+    ];
+}else{
+    footerCompany = [
+        {
+            itemText: "Inicio",
+            itemLink: "../index.html#inicio",
+        },
+        {
+            itemText: "Equipo",
+            itemLink: "../index.html#Talent",
+        },
+        {
+            itemText: "Proyectos",
+            itemLink: "../index.html#Proyectos",
+        },
+        {
+            itemText: "Contacto",
+            itemLink: "../index.html#Contacto",
+        },
+    ];
+}
+
+---
+
+<div class="mt-8"></div>
+<footer
+    class="relative bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900  pt-20 rounded-t-3xl"
+>
+    <div class="absolute right-0 top-0 h-full w-full flex justify-end">
+        <div
+            class="w-28 h-28 overflow-hidden flex rounded-xl relative blur-2xl"
+        >
+            <span
+                class="absolute w-16 h-16 -top-1 -right-1 bg-red-100 rounded-md rotate-45"
+            ></span>
+            <span
+                class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
+            ></span>
+            <span
+                class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
+            ></span>
+        </div>
+    </div>
+
+    <div class="absolute left-0 bottom-0 h-full w-full flex items-end">
+        <div
+            class="w-28 h-28 overflow-hidden flex rounded-xl relative blur-2xl"
+        >
+            <span
+                class="absolute w-16 h-16 -top-1 -right-1 bg-red-100 rounded-md rotate-45"
+            ></span>
+            <span
+                class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
+            ></span>
+            <span
+                class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
+            ></span>
+        </div>
+    </div>
+    <Container className="pb-8 relative overflow-hidden">
+        <span
+            class="absolute top-1/2 left-1/2 -translate-y-3 -translate-x-1/2 blur-2xl opacity-20 w-24 h-16 sm:w-48 sm:h-36 rounded-full rotate-12 skew-x-6 bg-primary"
+        ></span>
+        <div
+            class="grid grid-cols-1 md:grid-cols-3 md:items-stretch justify-around gap-8 relative w-full"
+        >
+            <div class="col-span-1 h-auto flex flex-col">
+                <div class="h-full">
+                    <a href="#" class="relative flex items-center gap-3">
+                        <div
+                            class="relative sm:w-4/12 md:w-7/12 overflow-hidden flex rounded-xl"
+                        >
+                            <img
+                                src="./images/logo1.svg"
+                                alt="logo-footer2"
+                                id="logo-footer2"
+                                class="w-full"
+                            />
+                        </div>
+                    </a>
+                    <Paragraph className={"mt-8"}>
+                        Dirección: 1ra del Diamante #438, Colinas de Plata,
+                        Minera de la Reforma, Hidalgo, México
+                    </Paragraph>
+                    <Paragraph className={"mt-2"}>contacto@mace-technology.com</Paragraph>
+                </div>
+
+                <!-- social links -->
+                <SocialLinks className="mt-2" />
+            </div>
+            <div class="lg:col-span-1 "></div>
+            <GroupFooterNav>
+                <FooterNav title={"Empresa"} navItems={footerCompany} />
+                <FooterNav title={"General"} navItems={footerSupport} />
+                
+            </GroupFooterNav>
+        </div>
+    </Container>
+    <div class="bg-gradient-to-tl from-box-bg py-2 relative">
+        <Container>
+            <div
+                class="flex justify-between items-center gap-6 md:text-lg text-heading-3"
+            >
+                <div>
+                    &copy; <span id="year"></span> MACE-TECHNOLOGY. All right
+                    reserved 2023
+                </div>
+            </div>
+        </Container>
+    </div>
+</footer>

@@ -1,0 +1,30 @@
+[
+    {
+        "tittle": "¿Qué es su empresa y qué servicios ofrecen?",
+        "descrip": "Somos una empresa de desarrollo de software que ofrece soluciones personalizadas para negocios. Ofrecemos servicios de diseño web, desarrollo de aplicaciones móviles y sistemas de gestión."
+    },
+    {
+        "tittle": "¿Cuál es el proceso de desarrollo de software?",
+        "descrip": "Nuestro proceso incluye la consulta inicial, el diseño, desarrollo, pruebas y despliegue. Trabajamos en estrecha colaboración con usted en cada etapa para garantizar que sus necesidades se cumplan."
+    },
+    {
+        "tittle": "¿Cuánto tiempo lleva desarrollar un proyecto de software?",
+        "descrip": "El tiempo de desarrollo varía según la complejidad del proyecto. Podemos proporcionar estimaciones precisas después de discutir los detalles de su proyecto."
+    },
+    {
+        "tittle": "¿Cómo se determina el costo de desarrollo?",
+        "descrip": "El costo depende de factores como la complejidad, características y tiempo de desarrollo. Realizamos evaluaciones detalladas y proporcionamos presupuestos personalizados."
+    },
+    {
+        "tittle": "¿Ofrecen soporte post-lanzamiento?",
+        "descrip": "Sí, ofrecemos soporte continuo y mantenimiento después del lanzamiento del proyecto para garantizar un funcionamiento sin problemas."
+    }
+    ,{
+        "tittle": "¿Puedo ver ejemplos de trabajos anteriores?",
+        "descrip": "Sí, puede explorar nuestro portafolio en nuestra página web para ver ejemplos de proyectos anteriores."
+    }
+    ,{
+        "tittle": "¿Cómo puedo ponerme en contacto con su equipo?",
+        "descrip": "Puede ponerse en contacto con nosotros a través de nuestro formulario de contacto en línea, correo electrónico o por teléfono. Estamos disponibles para responder a sus preguntas en cualquier momento."
+    }
+]

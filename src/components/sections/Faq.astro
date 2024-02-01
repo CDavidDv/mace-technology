@@ -1,0 +1,27 @@
+---
+import data from "../data/infoFaq.json"
+import Askitem from "../shared/Askitem.astro";
+import Navitem from "../shared/Navitem.astro";
+---
+
+<section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="items-center justify-center mt-5 flex">
+            <h2 class="font-bold text-center text-5xl mt-5 tracking-tight dark:text-gray-200 ">
+                Preguntas frecuentes
+            </h2>
+        </div>
+
+        <div class="max-w-screen-xl mx-auto px-5 min-h-sceen">
+            
+            <div class="grid max-w-xl mx-auto mt-8 px-6 border-solid border-2 rounded-3xl border-gray-300">
+                {
+                    data.map(item=>{
+                        return <Askitem {...item}/> 
+                    })
+                }
+                
+            </div>
+        </div>
+    </div>
+</section>

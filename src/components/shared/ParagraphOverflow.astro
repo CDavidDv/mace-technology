@@ -1,0 +1,60 @@
+---
+interface Props{
+    className?:string
+}
+
+const {className} = Astro.props
+---
+
+<p class={`md:text-md text-sm text-gray-900 dark:text-gray-200 ${className}`} id="paragraph">
+    <slot/>
+</p>
+<input type="checkbox" class="expand-btn dark:text-gray-200 dark:border-orange-500 hover:bg-orange-400 dark:hover:text-black dark:hover:font-medium">
+
+<style i>
+    
+    p#paragraph{
+        --max-lines: 4;
+        --line-height: 1.4;
+        display: flex;
+
+        max-height: calc(var(--max-lines)* 1em * var(--line-height));
+        line-height: var(--line-height);
+
+        overflow: hidden;
+        position: relative;
+    }
+
+    p#paragraph:has(+ .expand-btn:not(:checked))::before{
+        content: "";
+        position: absolute;
+        height: calc(1em* var(--line-height));
+        width: 100%;
+        bottom: 0;
+        pointer-events: none;
+        background: linear-gradient(to botom), transparent, white;
+    }
+
+    .expand-btn{
+        appearance: none;
+        border: 1px solid black;
+        padding: .5em;
+        border-radius: .25em;
+        cursor:pointer;
+        margin-top: 1rem;
+    }
+
+    .expand-btn::before{
+        content: "Ver más";
+    }
+
+    .expand-btn:checked::before{
+        content: "Ver menos";
+    }
+
+    p#paragraph:has(+ .expand-btn:checked) {
+        max-height: none;
+       
+    }
+
+</style>
