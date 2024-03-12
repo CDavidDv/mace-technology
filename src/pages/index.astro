@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/sections/Hero.astro';
+import ByNumber from '../components/sections/ByNumber.astro';
 import Services from '../components/sections/Services.astro';
 import AboutUs from '../components/sections/AboutUs.astro';
 import Features from '../components/sections/Features.astro';
@@ -9,9 +10,10 @@ import Brands from '../components/sections/Brands.astro';
 import OurTalent from '../components/sections/OurTalent.astro';
 ---
 
-<Layout title="Bienvenido a MACE" varLinks="index">
+<Layout description="MACETECHNOLOGY - Expertos en desarrollo de software a medida, aplicaciones móviles, sistemas de base de datos y soluciones de marketing. Desde páginas web responsivas hasta IA y servidores, ofrecemos soluciones integrales para impulsar tu negocio. ¡Contáctanos para potenciar tu presencia online y optimizar tu estrategia de marketing!" title="Desarrollo de Software Personalizado, Páginas Web y Soluciones de Marketing" varLinks="index" >
 	<main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
 		<Hero />
+		<ByNumber/>
 		<Brands />
 		<Services />
 		<OurTalent />

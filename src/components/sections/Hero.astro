@@ -3,9 +3,6 @@ import Button from "../shared/Button.astro";
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import ByNumber from "./ByNumber.astro";
-
-
-
 ---
 
 <section class="relative pt-32 lg:pt-36" id="inicio">
@@ -16,38 +13,19 @@ import ByNumber from "./ByNumber.astro";
         </div>
         <span class="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-primary to-yellow-300 absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"></span>
         <div class="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8 
-        lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2">
+        lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2 gap-9">
             
-            <h1 id="dynamic-text" class="text-5xl sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
-             font-bold text-heading-1 lg:h-48">
-             Desarrollo de <span class="text-transparent bg-clip-text bg-gradient-to-br from-orange-600 from-20%  to-red-600 transition-all">Software</span> hecho a la medida
+            <h1 id="dynamic-text" class="text-5xl sm:text-4xl/tight md:text-5xl/tight xl:text-4xl
+             font-bold text-heading-1 lg:h-36">
+             Tu Socio en el <span class="text-transparent bg-clip-text bg-gradient-to-br from-orange-600 from-20%  to-red-600 transition-all">Desarrollo de Software</span> Personalizado y Estrategias de Marketing Digital
+                
             </h1>
-            <script is:inline>
-                const dynamicTextElement = document.getElementById('dynamic-text');
-             
-
-                const originalText = dynamicTextElement.innerText;
-
-                let charIndex = 0;
-                
-                function typeText() {
-                    if (charIndex < originalText.length) {
-                    dynamicTextElement.innerText = originalText.slice(0, charIndex + 1);
-                
-
-                    charIndex++;
-                    setTimeout(typeText, 25); 
-                    }
-                    if(charIndex == originalText.length){
-                        dynamicTextElement.innerHTML = 'Desarrolo de <span id="final-text" class="text-transparent bg-clip-text bg-gradient-to-br from-orange-600 from-20% to-red-600 transition-all">Software</span> hecho a la medida';
-                    }
-                }
-                typeText();
-            </script>
-            <Paragraph className="mt-8">
-                Descubra cómo podemos ayudarle a alcanzar sus objetivos tecnológicos y superar sus desafíos. Desde la conceptualización y el diseño hasta el desarrollo, la implementación y el soporte continuo, estamos comprometidos a ser su socio tecnológico.
+            
+            <Paragraph className="">
+                Nos dedicamos a ofrecer soluciones de desarrollo de software personalizado para satisfacer las necesidades únicas de tu negocio. 
+                 ¡Confía en nosotros para llevar tu empresa al siguiente nivel tecnológico y digital!
             </Paragraph>
-            <div class="mt-10  w-full flex max-w-md mx-auto lg:mx-0">
+            <div class="mt-5  w-full flex max-w-md mx-auto lg:mx-0">
                 <div class="flex sm:flex-row flex-col gap-5 w-full justify-center items-center">
                     
                         <Button variant={"primary"} className={"min-w-max text-white"} idbtn={"abrirWhatsApp"}>
@@ -93,5 +71,29 @@ import ByNumber from "./ByNumber.astro";
         </div>
     </Container>
 
-    <ByNumber/>
+    
 </section>
+
+
+<script is:inline>
+    const dynamicTextElement = document.getElementById('dynamic-text');
+ 
+
+    const originalText = dynamicTextElement.innerText;
+
+    let charIndex = 0;
+    
+    function typeText() {
+        if (charIndex < originalText.length) {
+        dynamicTextElement.innerText = originalText.slice(0, charIndex + 1);
+    
+
+        charIndex++;
+        setTimeout(typeText, 11); 
+        }
+        if(charIndex == originalText.length){
+            dynamicTextElement.innerHTML = 'Tu Socio en el <span class="text-transparent bg-clip-text bg-gradient-to-br from-orange-600 from-20%  to-red-600 transition-all">Desarrollo de Software</span> Personalizado y Estrategias de Marketing Digital';
+        }
+    }
+    typeText();
+</script>
